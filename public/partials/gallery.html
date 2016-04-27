@@ -1,14 +1,14 @@
 <div class="row">
 <div ng-repeat="supermodel in supermodels">
-    <div class="col-md-4 col-xs-6  col-sm-offset-0">
-    <div class="thumbnail">
-      <img ng-src="{{supermodel.picture.url | fpConvert: { w:300, h:150 } }}" />
-      <div class="caption text-center">
-        <h3>{{supermodel.name}}</h3>
-        <p><label>Height: </label> {{supermodel.height}}</p>
-        <div class="text-right"><a ng-href="/#/detail/{{supermodel._id}}" class="btn btn-danger" role="button">View</a> </div>
+    <div class="col-md-4 col-sm-6 col-xs-12 col-offset-0">
+      <div class="hovereffect">
+        <a ng-href="/#/detail/{{supermodel._id}}" class="img-thumbnail">
+          <img class="img-responsive" ng-src="{{supermodel.picture.url | fpConvert: { w:800, h:450 } }}" />
+        <div class="overlay">
+          <h2>{{supermodel.name}}</h2>
+        </div>
+        </a>
       </div>
     </div>
-    </div>
-</div>
+  </div>
 </div>

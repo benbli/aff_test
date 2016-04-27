@@ -10,7 +10,7 @@ var supermodel = require('./app/routes/supermodel')();
 
 var options = { server: { socketOptions: { keepAlive: 1, connectTimeoutMS: 30000 } },
                 replset: { socketOptions: { keepAlive: 1, connectTimeoutMS : 30000 } } };
-var mongoPath = process.env.MONGOLAB_URI || 'mongodb://localhost/supermodeldatabase';
+var mongoPath = process.env.MONGODB_URI || 'mongodb://localhost/supermodeldatabase';
 mongoose.connect(mongoPath, options);
 var db = mongoose.connection;
 

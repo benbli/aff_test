@@ -4,6 +4,7 @@ galleryCtrl.controller('galleryController', ['$scope', '$http', function($scope,
   $scope.supermodels = [];
   $http.get('/supermodel')
     .success(function(data){
+      console.log(data);
       console.log(JSON.stringify(data));
       $scope.supermodels = data;
     })

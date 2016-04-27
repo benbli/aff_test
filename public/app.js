@@ -12,6 +12,6 @@ var app = angular.module('supermodelApp', ['addSupermodelCtrl', 'galleryCtrl', '
         templateUrl: 'partials/detail.html',
         controller: 'detailController'
       })
-      .otherwise({redirectTo:'/addSupermodel'});
+      .otherwise({redirectTo:'/gallery'});
       filepickerProvider.setKey('AgCWRl1q8QH2670gQls2Sz');
 });

@@ -12,8 +12,13 @@ module.exports = function() {
     },
     post : function(req, res) {
         var newSupermodel = new Supermodel(req.body);
-        newSupermodel.save(function(err){
-          res.json(req.body);
+        newSupermodel.save(function(err, data){
+          if(err) {
+            console.log(err);
+          } else {
+            console.log('SUCCESS! saving data', data);
+            res.json(data);
+          }
         });
     },
     getOne: function(req, res) {
@@ -22,7 +27,5 @@ module.exports = function() {
           res.json(supermodel);
         });
     }
-  }
+  };
 };
-    
-           

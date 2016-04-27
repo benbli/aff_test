@@ -4,7 +4,7 @@
       <h2 class="panel-title text-center"><span class="glyphicon glyphicon-user"></span>Model Details</h2>
     </div>
     <div class="panel-body text-center">
-      <img ng-src="{{supermodel.picture.url | fpConvert: {filter:'sharpen', w:500} }}" alt="" />
+      <img ng-src="{{supermodel.picture.url | fpConvert: { w:500 } }}" alt="" />
       <h2>{{supermodel.name}}</h2>
       <hr />
       <p class="text-left"><label>gender: </label>{{supermodel.gender}}</p>
@@ -14,7 +14,7 @@
         <div ng-repeat="picture in supermodel.morePictures">
           <div class="col-md-{{12 / supermodel.morePictures.length}}"></div>
           <a href="{{picture.url}}" class="thumbnail">
-            <img ng-src="{{picture.url | fpConvert: {filter:'sharpen', w:500} }}" alt="">
+            <img ng-src="{{picture.url | fpConvert: { w:500 } }}" alt="">
           </a>
         </div>
       </div>
